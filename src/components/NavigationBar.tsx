@@ -18,8 +18,6 @@ const navBarLinks: NavBarLink[] = [
 
 function NavigationBar() {
   const location = useLocation();
-  const currentPath = location.pathname.split("/");
-  const currentBase = currentPath.length > 0 ? `/${currentPath[1]}` : "";
 
   return (
     <nav className={styles.navigationBar}>
@@ -33,7 +31,7 @@ function NavigationBar() {
               to={link.to}
               className={classNames(
                 styles.topLink,
-                currentBase === link.to ? styles.topLinkCurrent : null
+                location.pathname === link.to ? styles.topLinkCurrent : null
               )}
             >
               {link.title}
