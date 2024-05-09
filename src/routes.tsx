@@ -5,9 +5,11 @@ import HomePage from "./pages/index.tsx";
 import NotFoundPage from "./pages/404.tsx";
 import AboutPage from "./pages/about.mdx";
 
+const basePath = import.meta.env.BASE_URL;
+
 export const routes: RouteObject[] = [
   {
-    path: "/",
+    path: basePath,
     element: <AppRoot />,
     errorElement: (
       <Page title="404">
@@ -24,7 +26,7 @@ export const routes: RouteObject[] = [
         ),
       },
       {
-        path: "/about",
+        path: `${basePath}/about`,
         element: (
           <Page title="About">
             <AboutPage />

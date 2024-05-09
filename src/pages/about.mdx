@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+
+export const basePath = import.meta.env.BASE_URL;
+
 # About Me
 
 Hi I am making this website with Vite
@@ -12,3 +16,5 @@ public static void main(String[] args) {
   thingy.foo();
 }
 ```
+
+<Link to={`${basePath}/projects`}>Go to projects</Link>

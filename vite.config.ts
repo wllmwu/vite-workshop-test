@@ -4,5 +4,6 @@ import mdx from "@mdx-js/rollup";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/vite-workshop-test",
   plugins: [{ enforce: "pre", ...mdx() }, react()],
 });

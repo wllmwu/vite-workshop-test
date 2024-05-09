@@ -7,11 +7,13 @@ interface NavBarLink {
   to: string;
 }
 
+const basePath = import.meta.env.BASE_URL;
+
 const navBarLinks: NavBarLink[] = [
-  { title: "Home", to: "/" },
-  { title: "About", to: "/about" },
-  { title: "Projects", to: "/projects" },
-  { title: "Contact", to: "/contact" },
+  { title: "Home", to: basePath },
+  { title: "About", to: `${basePath}/about` },
+  { title: "Projects", to: `${basePath}/projects` },
+  { title: "Contact", to: `${basePath}/contact` },
 ];
 
 function NavigationBar() {
@@ -21,7 +23,7 @@ function NavigationBar() {
 
   return (
     <nav className={styles.navigationBar}>
-      <Link to="/" className={styles.homeLink}>
+      <Link to={basePath} className={styles.homeLink}>
         My Site
       </Link>
       <menu className={styles.topLinkList}>
