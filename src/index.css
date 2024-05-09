@@ -1,0 +1,162 @@
+:root {
+  --background-color: #0c2b35;
+  --surface-color: #16404f;
+  --text-primary-color: #fff;
+  --text-secondary-color: #bbc;
+  --accent-color: #debb01;
+  --line-color: #7fd6d6;
+  --shadow-color: #00000030;
+
+  --common-border-radius: 8px;
+  --content-width: 90%;
+  --content-max-width: 64rem;
+  --content-padding: 4rem;
+
+  color-scheme: light dark;
+  background-color: var(--surface-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: var(--text-primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 3px solid var(--line-color);
+}
+
+h2 {
+  font-size: 1.75rem;
+  border-bottom: 2px solid var(--line-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--line-color);
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+
+p {
+  margin: 0.5em 0;
+  line-height: 1.5;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.125em;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 4px solid var(--text-secondary-color);
+  color: var(--text-secondary-color);
+}
+
+code {
+  font-family: Menlo, Monaco, monospace;
+  background-color: var(--line-color);
+  padding: 0.0625em 0.25em;
+  border-radius: 0.25em;
+}
+
+pre {
+  margin: 0.5em 0;
+  max-width: 64em;
+  background-color: var(--line-color);
+  padding: 0.5em 1em;
+  border-radius: 0.75em;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: revert;
+  padding: revert;
+  border-radius: revert;
+}
+
+ol,
+ul {
+  padding-inline-start: 2.5em;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ol,
+ul ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol,
+ol ul ol,
+ul ol ol,
+ul ul ol {
+  list-style-type: lower-roman;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ul ul,
+ol ul {
+  list-style-type: circle;
+}
+
+ul ul ul,
+ul ol ul,
+ol ul ul,
+ol ol ul {
+  list-style-type: square;
+}

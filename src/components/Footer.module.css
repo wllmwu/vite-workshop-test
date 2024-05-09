@@ -1,0 +1,20 @@
+.footer {
+  background-color: var(--surface-color);
+  flex: 1;
+  width: 100%;
+  border-top: 1px solid var(--line-color);
+}
+
+.footerContent {
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 1rem 0.25rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    padding-left: var(--content-padding);
+    padding-right: var(--content-padding);
+  }
+}
