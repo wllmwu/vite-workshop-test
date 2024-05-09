@@ -26,7 +26,7 @@ export const routes: RouteObject[] = [
         ),
       },
       {
-        path: `${basePath}/about`,
+        path: `${basePath}about`,
         element: (
           <Page title="About">
             <AboutPage />
