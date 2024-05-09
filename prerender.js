@@ -4,6 +4,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+const basePath = "vite-workshop-test/";
+
 /** Working directory absolute path */
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 /**
@@ -37,7 +39,7 @@ const routesToPrerender = fs
 (async () => {
   for (const route of routesToPrerender) {
     // handle index files specially so the URL doesn't include the "/index" part
-    const url = route.replace(/\/?index$/, "");
+    const url = basePath + route.replace(/\/?index$/, "");
     // ask our "SSR" script to render the page at this URL into an HTML string
     const appHtml = await render(url);
     // insert the HTML string into the template
